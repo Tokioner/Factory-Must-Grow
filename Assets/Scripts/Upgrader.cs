@@ -23,10 +23,10 @@ public class Upgrader : MonoBehaviour
 	}
 	
 	public void Upgrade(){
-		var upgradeValue = curValue;
+		int upgradeValue = (int)curValue;
 		switch(upgradeType){
 			case UpgradeManager.Upgrades.ManualAdditionalAmount:
-				UpgradeManager.ManualAdditionalAmount += (int)upgradeValue;
+				UpgradeManager.ManualAdditionalAmount += upgradeValue;
 				break;
 			case UpgradeManager.Upgrades.ManualMultiplyAmount:
 				UpgradeManager.ManualMultiplyAmount += upgradeValue;
@@ -35,10 +35,10 @@ public class Upgrader : MonoBehaviour
 				UpgradeManager.AutoClickTime -= upgradeValue;
 				break;
 			case UpgradeManager.Upgrades.AutoClickTimeMultiply:
-				UpgradeManager.AutoClickTimeMultiply -= upgradeValue;
+				UpgradeManager.AutoClickTimeMultiply += upgradeValue;
 				break;
 			case UpgradeManager.Upgrades.AutoClickValue:
-				UpgradeManager.AutoClickValue += (int)upgradeValue;
+				UpgradeManager.AutoClickValue += upgradeValue;
 				break;
 			case UpgradeManager.Upgrades.AutolMultiplyValue:
 				UpgradeManager.AutolMultiplyValue += upgradeValue;

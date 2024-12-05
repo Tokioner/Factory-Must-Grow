@@ -11,8 +11,9 @@ public class BuyButton : MonoBehaviour
 	
 	private Button button;
 	
-	private void Start(){
+	private void Awake(){
 		button = GetComponent<Button>();
+		SetPrice(Price);
 	}
 	
 	private void OnEnable(){
@@ -24,12 +25,15 @@ public class BuyButton : MonoBehaviour
 	}
 	
 	public void Buy(){
+		if(!Wallet.Validate(Price))
+			return;
 		Wallet.ReduceAmount(Price);
 		onBuy?.Invoke();
 	}
 	
 	public void SetPrice(int newPrice){
 		Price = newPrice;
+		CheckValid();
 		UpdateUI();
 	}
 	

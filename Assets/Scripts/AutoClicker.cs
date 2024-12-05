@@ -9,9 +9,9 @@ public class AutoClicker : MonoBehaviour
 	public void Update(){
 		if(UpgradeManager.AutoClickValue <= 0)
 			return;
-		var clickTime = UpgradeManager.AutoClickTime * UpgradeManager.AutoClickTimeMultiply;
+		var clickTime = ((float)(UpgradeManager.AutoClickTime)) * (1.0f+((float)UpgradeManager.AutoClickTimeMultiply/100.0f));
 		if(curTime >= clickTime){
-			var amount = UpgradeManager.AutoClickValue * UpgradeManager.AutolMultiplyValue;
+			var amount = ((float)(UpgradeManager.AutoClickValue)) * (1.0f+((float)UpgradeManager.AutolMultiplyValue/100.0f));
 			Wallet.AddAmount((int)amount);
 			curTime = 0.0f;
 		}else{
