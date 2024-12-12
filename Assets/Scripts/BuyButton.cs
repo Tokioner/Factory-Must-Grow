@@ -11,6 +11,8 @@ public class BuyButton : MonoBehaviour
 	
 	private Button button;
 	
+	
+	//Перевести в полиморфизм, хотябы частично
 	private void Awake(){
 		button = GetComponent<Button>();
 		SetPrice(Price);

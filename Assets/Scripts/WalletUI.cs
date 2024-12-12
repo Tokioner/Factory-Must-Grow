@@ -3,6 +3,7 @@ using TMPro;
 public class WalletUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI currencyText;
+	//TODO Сделать планое изменение значений.
 	
 	private void OnEnable(){
 		ActionBus.onWalletChanged += UpdateText;

@@ -5,7 +5,7 @@ public class AutoClicker : MonoBehaviour
 	private float curTime = 0.0f;
 	
 	[SerializeField] private Image Fill;
-	
+	// Мэйби стоит потомм сделать это всё экзепляром.
 	public void Update(){
 		if(UpgradeManager.AutoClickValue <= 0)
 			return;

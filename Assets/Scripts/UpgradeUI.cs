@@ -21,7 +21,7 @@ public class UpgradeUI : MonoBehaviour
 	private void OnDisable(){
 		ActionBus.onUpgraded -= UpdateUI;
 	}
-	
+	//TODO плавное изменине занчений
 	private void UpdateUI(){
 		float amount = 0;
 		switch (type){

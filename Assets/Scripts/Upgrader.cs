@@ -21,7 +21,7 @@ public class Upgrader : MonoBehaviour
 		curCost = baseUpgradeCost;
 		buyButton.SetPrice((int)curCost);
 	}
-	
+	//TODO Сделать красиво, но не обязательно)
 	public void Upgrade(){
 		int upgradeValue = (int)curValue;
 		switch(upgradeType){
